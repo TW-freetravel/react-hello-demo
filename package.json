@@ -1,0 +1,24 @@
+{
+  "name": "react-hello-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "bower": "^1.7.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flashyy/react-hello-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/flashyy/react-hello-demo/issues"
+  },
+  "homepage": "https://github.com/flashyy/react-hello-demo#readme",
+  "description": ""
+}

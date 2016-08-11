@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./bower_components/react/react.min.js"></script>
+    <script src="./bower_components/react/react-dom.min.js"></script>
+    <script src="./bower_components/babel/browser.min.js"></script>
+</head>
+<body>
+     <div id = "content"></div>
+
+     <script type="text/babel">
+
+         let HelloMessage = React.createClass({
+             render: function() {
+                 let styleObj = {
+                     color: "red",
+                     fontSize: "44px",
+                     paddingLeft:'200px'
+                 };
+                 return <h1><div style={styleObj}>Hello {this.props.name}</div></h1>;
+             }
+         });
+         ReactDOM.render(
+                 <HelloMessage name="John"/>,
+                 document.getElementById('content')
+         );
+
+         document.getElementById('content').style.paddingLeft = '220px';
+
+     </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./bower_components/react/react.min.js"> </script>
+    <script src="./bower_components/react/react-dom.min.js"></script>
+    <script src="./bower_components/babel/browser.min.js"></script>
+</head>
+<body>
+      <div id="content"></div>
+
+      <script type="text/babel">
+          let  second = ["aaa","bbb","ccc"];
+
+          ReactDOM.render(<div><h1>{
+              second.map( name => {
+                  return <div>hello,{name}!</div>
+              })}</h1></div>,
+          document.getElementById("content"));
+      </script>
+</body>
+</html>
+

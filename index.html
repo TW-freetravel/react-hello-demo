@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Hello React!</title>
+    <script src="./bower_components/react/react.min.js"></script>
+    <script src="./bower_components/react/react-dom.min.js"></script>
+    <script src="./bower_components/babel/browser.min.js"></script>
+</head>
+<body>
+
+<div id="content"></div>
+
+<script type="text/babel">
+
+    let FirstReact = React.createClass({
+        render: function () {
+            return <div><h1>Hello world
+                {this.props.name}
+                {this.props.age}</h1></div>
+        }
+    });
+    ReactDOM.render(
+            <FirstReact name = "meimei" age = "18" />,
+            document.getElementById("content")
+    );
+</script>
+
+</body>
+</html>

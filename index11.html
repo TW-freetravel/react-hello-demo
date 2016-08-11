@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./bower_components/react/react.min.js"></script>
+    <script src="./bower_components/react/react-dom.min.js"></script>
+    <script src="./bower_components/babel/browser.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/babel">
+    var UserGist = React.createClass({
+        getInitialState: function() {
+            return {
+                username: '',
+                lastGistUrl: ''
+            };
+        },
+
+        componentDidMount: function() {
+            $.get(this.props.source, function(result) {
+                var lastGist = result[0];
+                if (this.isMounted()) {
+                    this.setState({
+                        username: lastGist.owner.login,
+                        lastGistUrl: lastGist.html_url
+                    });
+                }
+            }.bind(this));
+        },
+
+        render: function() {
+            return (
+                    <div>
+                        {this.state.username}'s last gist is <a href={this.state.lastGistUrl}>here</a>.
+                    </div>
+            );
+        }
+    });
+
+    ReactDOM.render(
+            <UserGist source="https://api.github.com/users/octocat/gists" />,
+            document.getElementById('example')
+    );
+</script>
+</body>
+</html>

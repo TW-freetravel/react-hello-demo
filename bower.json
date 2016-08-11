@@ -1,0 +1,18 @@
+{
+  "name": "react-hello-demo",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "https://github.com/flashyy/react-hello-demo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "^15.3.0",
+    "babel": "^5.8.38"
+  }
+}
